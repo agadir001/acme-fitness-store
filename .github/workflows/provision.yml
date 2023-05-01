@@ -41,7 +41,7 @@ jobs:
         run: |
           terraform plan -input=false \
             -var "project_name=${{ secrets.TF_PROJECT_NAME}}" \
-            -var "resource_group_location=${{ secrets.AZURE_LOCATION }}" \
+            -var "resource_group_location="eastus" \
             -var "sso-jwk-uri=${{ secrets.OIDC_JWK_SET_URI }}" \
             -var "sso-client-id=${{ secrets.OIDC_CLIENT_ID }}" \
             -var "sso-client-secret=${{ secrets.OIDC_CLIENT_SECRET }}" \
