@@ -24,6 +24,10 @@ jobs:
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
           BACKEND_CONFIG: ${{ secrets.TF_BACKEND_CONFIG }}
+          
+      - name: Set Env Variables
+        run: source ./azure/setup-env-variables.sh
+        
       - name: Terraform Format
         run: terraform fmt -check
       - name: Terraform Init
