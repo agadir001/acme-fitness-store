@@ -75,7 +75,7 @@ jobs:
           ORDER_SERVICE_APP: ${{ env.ORDER_SERVICE_APP }}
           CATALOG_SERVICE_APP: ${{ env.CATALOG_SERVICE_APP }}
           FRONTEND_APP: ${{ env.FRONTEND_APP }}
-      - name: Configure Identity Provider
+#      - name: Configure Identity Provider
 #         run: ../.github/scripts/identity-provider.sh
 #         env:
 #           RESOURCE_GROUP: ${{ env.RESOURCE_GROUP }}
