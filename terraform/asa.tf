@@ -108,7 +108,7 @@ resource "azurerm_spring_cloud_configuration_service" "asa_config_svc" {
     name     = "acme-fitness-store-config"
     label    = "main"
     patterns = ["catalog/default", "catalog/key-vault", "identity/default", "identity/key-vault", "payment/default"]
-    uri      = "https://github.com/Azure-Samples/acme-fitness-store-config"
+    uri      = "https://github.com/agadir001/acme-fitness-store-config"
   }
 }
 
