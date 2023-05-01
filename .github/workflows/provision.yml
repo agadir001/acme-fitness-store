@@ -27,7 +27,7 @@ jobs:
           
       
       - name: Set Env Variables
-        run: source ./azure/setup-env-variables.sh
+        run: source ../azure/setup-env-variables.sh
         
 #       - name: Terraform Format
 #         run: terraform fmt -check
