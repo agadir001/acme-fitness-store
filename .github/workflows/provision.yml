@@ -51,6 +51,15 @@ jobs:
         run: exit 1
       - name: Terraform Apply
         run: |
+          terraform destroy -auto-approve -input=false \
+            -var "project_name=${{ secrets.TF_PROJECT_NAME}}" \
+            -var "resource_group_location=${{ secrets.LOCATION }}" \
+            -var "sso-jwk-uri=${{ secrets.OIDC_JWK_SET_URI }}" \
+            -var "sso-client-id=${{ secrets.OIDC_CLIENT_ID }}" \
+            -var "sso-client-secret=${{ secrets.OIDC_CLIENT_SECRET }}" \
+            -var "sso-issuer-uri=${{ secrets.OIDC_ISSUER_URI }}"
+      - name: Terraform Apply
+        run: |
           terraform apply -auto-approve -input=false \
             -var "project_name=${{ secrets.TF_PROJECT_NAME}}" \
             -var "resource_group_location=${{ secrets.LOCATION }}" \
