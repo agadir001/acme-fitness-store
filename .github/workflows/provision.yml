@@ -26,8 +26,8 @@ jobs:
           BACKEND_CONFIG: ${{ secrets.TF_BACKEND_CONFIG }}
           
       
-# - name: Set Env Variables
-#         run: source ./azure/setup-env-variables.sh
+      - name: Set Env Variables
+        run: source ./azure/setup-env-variables.sh
         
 #       - name: Terraform Format
 #         run: terraform fmt -check
