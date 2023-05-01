@@ -1,14 +1,6 @@
 name: Provision
 on:
   workflow_dispatch:
-    inputs: { }
-  push:
-    branches:
-      - Azure
-    paths:
-      - 'terraform/**'
-      - 'azure/builder.json'
-      - 'azure/routes/**'
 env:
   SPRING_APPS_SERVICE: ${{ secrets.TF_PROJECT_NAME }}-asa
   RESOURCE_GROUP: ${{ secrets.TF_PROJECT_NAME }}-grp
